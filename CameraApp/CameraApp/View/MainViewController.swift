@@ -29,7 +29,7 @@ class MainViewController: UIViewController {
     // MARK: - Methods [Private]
 
     private func setupTakePhotoButton() {
-        takePhotoButton.setTitle(NSLocalizedString("agreement button", comment: ""), for: .normal)
+        takePhotoButton.setTitle(NSLocalizedString("take photo", comment: ""), for: .normal)
         takePhotoButton.tintColor = .white
         takePhotoButton.backgroundColor = .blue
         takePhotoButton.layer.cornerRadius = 10.0

@@ -16,6 +16,7 @@
 		1A0856D42A70985E00F29047 /* CameraAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0856D32A70985E00F29047 /* CameraAppUITests.swift */; };
 		1A0856D62A70985E00F29047 /* CameraAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0856D52A70985E00F29047 /* CameraAppUITestsLaunchTests.swift */; };
 		1A0856E72A7098ED00F29047 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0856E62A7098ED00F29047 /* MainViewController.swift */; };
+		1A0856EB2A70A06700F29047 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A0856EA2A70A06700F29047 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1A0856D32A70985E00F29047 /* CameraAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAppUITests.swift; sourceTree = "<group>"; };
 		1A0856D52A70985E00F29047 /* CameraAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1A0856E62A7098ED00F29047 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1A0856EA2A70A06700F29047 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				1A0856BB2A70985E00F29047 /* Assets.xcassets */,
 				1A0856BD2A70985E00F29047 /* LaunchScreen.storyboard */,
 				1A0856C02A70985E00F29047 /* Info.plist */,
+				1A0856EA2A70A06700F29047 /* Localizable.strings */,
 			);
 			path = etc;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0856EB2A70A06700F29047 /* Localizable.strings in Resources */,
 				1A0856BF2A70985E00F29047 /* LaunchScreen.storyboard in Resources */,
 				1A0856BC2A70985E00F29047 /* Assets.xcassets in Resources */,
 				1A0856BA2A70985C00F29047 /* Main.storyboard in Resources */,
