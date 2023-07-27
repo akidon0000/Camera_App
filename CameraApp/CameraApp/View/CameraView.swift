@@ -8,10 +8,54 @@
 import UIKit
 import AVFoundation
 
-class CameraView: UIViewController {
-    static func instantiate() -> CameraView {
-        return UINib(nibName: "CameraView", bundle: nil).instantiate(withOwner: self, options: nil).first as! CameraView
-    }
+class CameraView: UIView {
+
+    // MARK: Stored Instance Properties
+
+    // MARK: Computed Instance Properties
+
+    // MARK: IBOutlets
+
+    // MARK: Initializers
+
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//
+//        configureView()
+//    }
+//
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//
+//        configureView()
+//    }
+//
+//    // MARK: IBActions
+//
+//    // MARK: Other Internal Methods
+//
+//    override func prepareForInterfaceBuilder() {
+//        super.prepareForInterfaceBuilder()
+//
+//        configureView()
+//    }
+//
+//    // MARK: Other Private Methods
+//
+//    private func configureView() {
+//        loadNib()
+//
+//        // TODO: 他にUIの装飾処理があれば実行する
+//    }
+//
+//    private func loadNib() {
+//        guard let cameraView = R.nib.cameraView(owner: self) else {
+//            fatalError("Fail to load FooView from Nib.")
+//        }
+//        cameraView.frame = self.bounds
+//        addSubview(cameraView)
+//    }
+
 //    override init(frame: CGRect) {
 //        super.init(frame: frame)
 ////        configure()

@@ -9,15 +9,15 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-//    let cameraView = CameraView()
-
-    static func instantiate() -> ProfileViewController {
-        return UIStoryboard(name: "Profile", bundle: nil).instantiateInitialViewController() as! ProfileViewController
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        let vc = CameraView.instantiate()
-//        self.view.addSubview(cameraView)
+//        var view = UIView()
+////        view = R.nib.cameraView
+//        view.custom
+//        self.view.addSubview(view)
+        if let cameraView = R.nib.cameraView.firstView(withOwner: nil) as? CameraView {
+            self.view.addSubview(cameraView)
+        }
+        print("a")
     }
 }

@@ -24,7 +24,7 @@ class MainViewController: UIViewController {
     // MARK: - IBAction
 
     @IBAction func takePhotoButton(_ sender: Any) {
-        let vc = ProfileViewController.instantiate()
+        let vc = R.storyboard.profile.profileViewController()!
         present(vc, animated: true)
     }
 
