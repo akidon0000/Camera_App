@@ -15,9 +15,36 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GO1-qt-nQh">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yip-Ld-5t8">
+                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="AcG-Dn-pIn">
+                                        <connections>
+                                            <action selector="launchCamera:" destination="Y6W-OH-hqX" id="iZr-nf-8aD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yip-Ld-5t8" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="EM2-q7-wGd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GO1-qt-nQh" secondAttribute="trailing" id="MAE-16-gYi"/>
+                            <constraint firstItem="Yip-Ld-5t8" firstAttribute="top" secondItem="GO1-qt-nQh" secondAttribute="bottom" id="UJj-SF-hpy"/>
+                            <constraint firstItem="GO1-qt-nQh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fvf-iS-QTa"/>
+                            <constraint firstItem="Yip-Ld-5t8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gP5-iP-xtg"/>
+                            <constraint firstItem="Yip-Ld-5t8" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="j5h-cg-zT3"/>
+                            <constraint firstItem="GO1-qt-nQh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="xzG-IS-YWX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="GO1-qt-nQh" id="kuo-6N-2An"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
