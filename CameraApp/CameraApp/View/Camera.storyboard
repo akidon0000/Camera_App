@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,34 +17,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GO1-qt-nQh">
-                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
-                            </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yip-Ld-5t8">
-                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
-                                <items>
-                                    <barButtonItem systemItem="camera" id="AcG-Dn-pIn">
-                                        <connections>
-                                            <action selector="launchCamera:" destination="Y6W-OH-hqX" id="iZr-nf-8aD"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZu-fU-TR8">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qb3-jL-UgO">
+                                <rect key="frame" x="159" y="783" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="shootButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="jKI-mk-UUd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Yip-Ld-5t8" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="EM2-q7-wGd"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GO1-qt-nQh" secondAttribute="trailing" id="MAE-16-gYi"/>
-                            <constraint firstItem="Yip-Ld-5t8" firstAttribute="top" secondItem="GO1-qt-nQh" secondAttribute="bottom" id="UJj-SF-hpy"/>
-                            <constraint firstItem="GO1-qt-nQh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fvf-iS-QTa"/>
-                            <constraint firstItem="Yip-Ld-5t8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gP5-iP-xtg"/>
-                            <constraint firstItem="Yip-Ld-5t8" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="j5h-cg-zT3"/>
-                            <constraint firstItem="GO1-qt-nQh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="xzG-IS-YWX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="qb3-jL-UgO" secondAttribute="bottom" id="C1C-Ma-od6"/>
+                            <constraint firstItem="VZu-fU-TR8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="gWM-b3-s0Z"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VZu-fU-TR8" secondAttribute="trailing" id="rlw-qQ-3wH"/>
+                            <constraint firstItem="qb3-jL-UgO" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="sVE-G6-zdQ"/>
+                            <constraint firstItem="VZu-fU-TR8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="sdp-0g-yCP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="VZu-fU-TR8" secondAttribute="bottom" id="tMQ-gj-kXM"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="GO1-qt-nQh" id="kuo-6N-2An"/>
+                        <outlet property="cameraView" destination="VZu-fU-TR8" id="RnS-3J-C38"/>
+                        <outlet property="captureButton" destination="qb3-jL-UgO" id="frq-lG-j3C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
