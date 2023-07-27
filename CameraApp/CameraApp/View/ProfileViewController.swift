@@ -1,29 +1,23 @@
 //
-//  ProfileViewController.swift
+//  CameraViewController.swift
 //  CameraApp
 //
-//  Created by Akihiro Matsuyama on 2023/07/27.
+//  Created by Akihiro Matsuyama on 2023/07/26.
 //
 
 import UIKit
 
 class ProfileViewController: UIViewController {
 
+//    let cameraView = CameraView()
+
+    static func instantiate() -> ProfileViewController {
+        return UIStoryboard(name: "Profile", bundle: nil).instantiateInitialViewController() as! ProfileViewController
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let vc = CameraView.instantiate()
+//        self.view.addSubview(cameraView)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
