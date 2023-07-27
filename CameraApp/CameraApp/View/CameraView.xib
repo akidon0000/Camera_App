@@ -12,37 +12,48 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraView" customModule="CameraApp" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="CameraView" customModule="CameraApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <rect key="frame" x="0.0" y="0.0" width="338" height="565"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNm-wP-ocL">
-                    <rect key="frame" x="43" y="50" width="75" height="35"/>
-                    <color key="backgroundColor" systemColor="labelColor"/>
+                    <rect key="frame" x="144.33333333333334" y="525.66666666666663" width="49.666666666666657" height="34.333333333333371"/>
+                    <color key="tintColor" systemColor="labelColor"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="moonphase.full.moon.inverse" catalog="system"/>
                     <connections>
                         <action selector="button:" destination="-1" eventType="touchUpInside" id="QSg-DS-b4J"/>
+                        <action selector="shootButton:" destination="-1" eventType="touchUpInside" id="1Sx-36-KWB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="752-K7-dvT">
+                    <rect key="frame" x="286.66666666666669" y="525" width="46.333333333333314" height="35"/>
+                    <color key="tintColor" systemColor="labelColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system"/>
+                    <connections>
+                        <action selector="button:" destination="-1" eventType="touchUpInside" id="KrO-HV-XuF"/>
+                        <action selector="dismissButton:" destination="-1" eventType="touchUpInside" id="d22-NV-3II"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBlueColor"/>
             <constraints>
-                <constraint firstItem="sNm-wP-ocL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="43" id="5uQ-dk-gJB"/>
-                <constraint firstItem="sNm-wP-ocL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="vdH-80-fPq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sNm-wP-ocL" secondAttribute="bottom" constant="5" id="f9C-it-wVl"/>
+                <constraint firstItem="sNm-wP-ocL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fiv-7f-dVI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="752-K7-dvT" secondAttribute="trailing" constant="5" id="lXZ-4W-aGM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="752-K7-dvT" secondAttribute="bottom" constant="5" id="tQX-wP-Wh6"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="46" y="21"/>
+            <point key="canvasLocation" x="3.0534351145038165" y="-80.633802816901408"/>
         </view>
     </objects>
     <resources>
+        <image name="moonphase.full.moon.inverse" catalog="system" width="128" height="123"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

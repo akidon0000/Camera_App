@@ -10,9 +10,14 @@ import AVFoundation
 
 class CameraView: UIView, AVCapturePhotoCaptureDelegate {
 
-    @IBAction func button(_ sender: Any) {
-        print("bbb")
-    }
+    var cameraView: UIView!
+    var cameraDevices: AVCaptureDevice!
+    var captureVideoLayer: AVCaptureVideoPreviewLayer!
+
+    var captureSession = AVCaptureSession()
+    var imageOutput = AVCapturePhotoOutput()
+
+    var delegate: ProfileViewController?
 
     //コードで設置した時
     override init(frame: CGRect) {
@@ -25,55 +30,24 @@ class CameraView: UIView, AVCapturePhotoCaptureDelegate {
         loadNib()
     }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        //viewのautolayout取得前//VCの制約決定前
-    }
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        //viewのautolayout取得前後//VCの制約決定前
-    }
-
     private func loadNib() {
         settingSession()
         startCapture()
     }
 
-    var captureVideoLayer: AVCaptureVideoPreviewLayer!
 
-    var cameraView: UIView!
-    var cameraDevices: AVCaptureDevice!
-
-    var captureSession = AVCaptureSession()
-    var imageOutput = AVCapturePhotoOutput()
-
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        settingSession()
-//    }
-//
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        startCapture()
-//    }
-//
-//    override func viewDidDisappear(_ animated: Bool) {
-//        super.viewDidDisappear(animated)
-//        stopCapture()
-//    }
-
-
-//    @IBAction func shootButton(_ sender: Any) {
+    @IBAction func shootButton(_ sender: Any) {
 //        let settings = AVCapturePhotoSettings()
 //        settings.flashMode = .auto
 //        UIGraphicsBeginImageContextWithOptions(UIScreen.main.bounds.size, false, 0.0)
 //        imageOutput.capturePhoto(with: settings, delegate: self)
-//    }
+    }
 
-//    @IBAction func didTapCloseButton(_ sender: Any) {
-//        dismiss(animated: true)
-//    }
+    @IBAction func dismissButton(_ sender: Any) {
+        delegate!.dismissCameraView()
+    }
+
+
 
 //    internal func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
 //        let imageData = photo.fileDataRepresentation()
@@ -114,11 +88,13 @@ class CameraView: UIView, AVCapturePhotoCaptureDelegate {
         captureSession.addOutput(imageOutput)
         //画像を表示するレイヤーを生成
         captureVideoLayer = AVCaptureVideoPreviewLayer.init(session: captureSession)
-        captureVideoLayer.frame = self.bounds
+        print(self.bounds)
+        print(self.frame)
+        captureVideoLayer.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height - 44)
         captureVideoLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
 
         //Viewに追加
-        self.layer.insertSublayer(captureVideoLayer, at: 3)
+        self.layer.insertSublayer(captureVideoLayer, at: 0)
     }
 
     private func startCapture() {
